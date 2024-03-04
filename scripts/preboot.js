@@ -79,6 +79,11 @@ function getDefaultSettings() {
 			limitedQuantityIcon: false,
 			RFYAFAAITabs: false,
 		},
+
+		reviews: {
+			showProductTitle: undefined,
+			fancyButtonStyling: false,
+		},
 	};
 
 	return settings;
@@ -296,6 +301,11 @@ async function getSettings() {
 			});
 	}
 	uuid = appSettings.general.uuid;
+
+	if (appSettings.reviews.showProductTitle === undefined) {
+		appSettings.reviews.showProductTitle = true;
+		saveSettings();
+	}
 
 	showRuntime("PRE: Settings loaded");
 }
