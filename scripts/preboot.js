@@ -81,7 +81,8 @@ function getDefaultSettings() {
 		},
 
 		reviews: {
-			showProductTitle: undefined,
+			templateText: "",
+			showProductTitle: true,
 			fancyButtonStyling: false,
 		},
 	};

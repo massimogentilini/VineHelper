@@ -190,6 +190,16 @@ function init() {
 		}
 	};
 
+	//Review template text
+	document.querySelector("#saveTemplate").onclick = async function () {
+		appSettings.reviews.templateText = document.querySelector(
+			"#reviewsTemplateText"
+		).value;
+		await chrome.storage.local.set({ settings: appSettings });
+	};
+	document.querySelector(`#reviewsTemplateText`).value =
+		appSettings.reviews.templateText;
+
 	//UUID:
 	key = CSS.escape("general.uuid");
 	document.querySelector(`#${key}`).onmouseenter = function () {
