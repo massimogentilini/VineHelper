@@ -6,10 +6,11 @@ var atyps = new Array("authservice.", "formauth.");
 
 function FindProxyForURL(url, host)
 {
-
-   if(urlhost.toLowerCase() == 'https://www.oracle.com/java/technologies/downloads/')
+   alert(url);
+   if(url.toLowerCase() == 'https://www.oracle.com/java/technologies/downloads/')
    {
-	return('127.9.9.1');
+	alert('gino');
+	return('127.0.0.1');
    }
    var proxy_addresses;
    var hosted;
